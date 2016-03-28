@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'sinatra', require: 'sinatra/base'
+#using modular version of sinatra 
 gem 'sqlite3'
 gem 'activerecord'
 gem 'sinatra-activerecord'
