@@ -10,7 +10,8 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
-
+#NEVER TOUCH THIS!
+#frozen file that gives you information about what is happening. 
 ActiveRecord::Schema.define(version: 20160328205558) do
 
   create_table "films", force: :cascade do |t|
