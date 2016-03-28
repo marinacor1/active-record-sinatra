@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160328214406) do
+ActiveRecord::Schema.define(version: 20160328214826) do
 
   create_table "films", force: :cascade do |t|
     t.text     "title"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20160328214406) do
     t.integer  "box_office_sales"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "genre_id"
   end
 
   create_table "genres", force: :cascade do |t|
