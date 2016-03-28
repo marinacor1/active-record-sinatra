@@ -10,9 +10,8 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
-#NEVER TOUCH THIS!
-#frozen file that gives you information about what is happening. 
-ActiveRecord::Schema.define(version: 20160328205558) do
+
+ActiveRecord::Schema.define(version: 20160328214406) do
 
   create_table "films", force: :cascade do |t|
     t.text     "title"
@@ -20,6 +19,12 @@ ActiveRecord::Schema.define(version: 20160328205558) do
     t.integer  "box_office_sales"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+  end
+
+  create_table "genres", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
