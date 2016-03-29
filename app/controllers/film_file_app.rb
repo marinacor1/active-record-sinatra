@@ -9,3 +9,6 @@ class FilmFile < Sinatra::Base
     erb :genres_index
   end
 end
+
+#active record lets you take care of integrity, query, migration lets you codify the data model changes in your application such that your data
+#model insync with your code
