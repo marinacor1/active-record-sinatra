@@ -14,3 +14,4 @@ DatabaseCleaner.strategy = :truncation, {except: %w[public.schema_migrations]}
 #transaction - begin transaction, won't delete anything. unpredictable
 
 Capybara.app = FilmFile
+#controller ^
