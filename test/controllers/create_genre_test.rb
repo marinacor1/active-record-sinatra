@@ -19,7 +19,7 @@ class CreateGenreTest < Minitest::Test
     assert_equal 0, Genre.count
 
     post '/genres', {genre: {name: 'Cartoon'}} #similar to capybara's visit
-
+    # follow_redirect!
     assert_equal 1, Genre.count #SELECT COUNT * from genres;
     assert_equal 200, last_response.status
     assert_equal "Genre Created", last_response.body

@@ -22,6 +22,7 @@ class FilmFile < Sinatra::Base
   post '/genres' do
     genre = Genre.new(params[:genre])
     if genre.save
+      # redirect '/genres/#{genre_id}'
       status 200
       body "Genre Created"
     else
