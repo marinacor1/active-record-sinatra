@@ -35,8 +35,9 @@ class CreateGenreTest < Minitest::Test
 
   def test_can_create_genre_with_different_valid_attributes
     post '/genres', {genre: {name: "Film noir"} }
+    post '/genres', {genre: {name: "Foreign"} }
 
-    assert_equal 1, Genre.count
+    assert_equal 2, Genre.count
     assert_equal 200, last_response.status
     assert_equal "Genre Created", last_response.body
   end
