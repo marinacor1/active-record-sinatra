@@ -30,10 +30,10 @@ class CreateGenreTest < Minitest::Test
 
     assert_equal 0, Genre.count
     assert_equal 400, last_response.status
-    assert_equal "Missing name", last_response.body
+    assert_equal "Name can't be blank", last_response.body
   end
 
-  def test_can_create_genre_with_different_valid_attributes
+  def test_can_create_genre_with_multiple_valid_attributes
     post '/genres', {genre: {name: "Film noir"} }
     post '/genres', {genre: {name: "Foreign"} }
 

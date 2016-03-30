@@ -1,3 +1,4 @@
+require 'pry'
 require 'minitest/pride'
 
 ENV["RACK_ENV"] ||= "test"

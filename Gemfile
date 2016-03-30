@@ -12,5 +12,6 @@ group :development, :test do #allows you to group certain gems during developmen
   gem 'tux' #allows you direct access to database
   gem 'capybara'
   gem 'rack-test'
+  gem 'pry'
   gem 'database_cleaner'
 end
