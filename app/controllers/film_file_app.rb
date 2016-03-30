@@ -18,6 +18,12 @@ class FilmFile < Sinatra::Base
     @director = Director.find(id)
     erb :director_index
   end
+
+  post '/genres' do
+    Genre.create(params[:genre])
+    status 200
+    body "Genre Created"
+  end
 end
 
 #active record lets you take care of integrity, query, migration lets you codify the data model changes in your application such that your data
