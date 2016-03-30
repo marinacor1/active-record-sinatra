@@ -20,9 +20,16 @@ class FilmFile < Sinatra::Base
   end
 
   post '/genres' do
-    Genre.create(params[:genre])
-    status 200
-    body "Genre Created"
+    genre = Genre.new(params[:genre])
+    if genre.save
+      status 200
+      body "Genre Created"
+    else
+      status 400
+      body "Missing name"
+    end
+    # @genres = Genre.all
+    # erb :genre_index
   end
 end
 

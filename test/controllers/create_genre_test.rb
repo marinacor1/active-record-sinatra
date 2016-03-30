@@ -25,7 +25,20 @@ class CreateGenreTest < Minitest::Test
     assert_equal "Genre Created", last_response.body
   end
 
-  def test_create_genre_without_valid_attributes
+  def test_cannot_create_genre_without_valid_attributes
+    post '/genres', {genre: {} }
 
+    assert_equal 0, Genre.count
+    assert_equal 400, last_response.status
+    assert_equal "Missing name", last_response.body
+  end
+
+  def test_cannot_create_genre_with_wrong_invalid_attributes
+    skip
+    post '/genres', {genre: {name: "Walmart"} }
+
+    assert_equal 0, Genre.count
+    assert_equal 400, last_response.status
+    assert_equal "Missing name", last_response.body
   end
 end

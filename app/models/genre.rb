@@ -1,4 +1,5 @@
 class Genre < ActiveRecord::Base
+  validates :name, presence: true #uniquness: true is another option
   has_many(:films)
 end
 
